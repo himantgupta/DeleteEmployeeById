@@ -59,7 +59,7 @@ public class DeleteEmployeeLambdaFunctionHandler implements RequestStreamHandler
         	try {
 	    		outputStream.write(new ResponseMessage("You do not have acces to do this operation.Please send username and password in the header along with content type as application/Json").toString().getBytes(Charset.forName("UTF-8")));
 	        } catch (IOException e) {
-	    		// TODO Auto-generated catch block
+	    		outputStream.write(new ResponseMessage("No employee found with this Id.").toString().getBytes(Charset.forName("UTF-8")));
 	    		e.printStackTrace();
 	        } 
         
