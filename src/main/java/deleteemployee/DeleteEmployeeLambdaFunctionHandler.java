@@ -50,7 +50,7 @@ public class DeleteEmployeeLambdaFunctionHandler implements RequestStreamHandler
 	        
 	        try {
 	    		outputStream.write(new ResponseMessage("Employee Status updated to Inactive").toString().getBytes(Charset.forName("UTF-8")));
-	        } catch (IOException e) {
+	        } catch (Exception e) {
 	    		// TODO Auto-generated catch block
 	    		e.printStackTrace();
 	        } 
